@@ -7,16 +7,22 @@
 
 import Foundation
 
+struct FirstViewDeviceViewData : Identifiable {
+    let id = UUID()
+    let name: String
+    let interval: RecInterval
+}
+
 class FirstViewModel : ObservableObject {
-    @Published var isShowText: Bool = true
-    @Published var deviceName: String = ""
+    @Published var deviceList: [FirstViewDeviceViewData] = []
 }
 
 extension FirstViewModel {
     
     static func preViewModel() -> FirstViewModel {
         let model = FirstViewModel()
-        model.deviceName = "Test Device Name"
+        model.deviceList.append(FirstViewDeviceViewData(name: "FirstDevice", interval: RecInterval(interval: 10)))
+        model.deviceList.append(FirstViewDeviceViewData(name: "SecondDevice", interval: RecInterval(interval: 60)))
         return model
     }
     

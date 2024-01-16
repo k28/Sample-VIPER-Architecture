@@ -20,7 +20,9 @@ struct FirstView: View {
     
     var body: some View {
         VStack {
-            Text(viewModel.deviceName)
+            List(viewModel.deviceList) { item in
+                Text(item.name)
+            }
             
             Button("Tap Me") {
                 onButtonTap()
