@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Sample-VIPER-Architecture
 //
-//  Created by kazuya on 2024/01/16.
+//  Created by K.Hatano on 2024/01/16.
 //
 
 import UIKit
